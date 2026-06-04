@@ -1,0 +1,22 @@
+{
+  "title": "Suspicious cloud login and credential phishing report",
+  "source": "Synthetic portfolio sample",
+  "observed_at": "2026-06-04T09:20:00+08:00",
+  "environment": "Small company using cloud email and VPN",
+  "incident_notes": [
+    "A user reported receiving a message asking them to verify their mailbox quota through an external link.",
+    "The link pointed to hxxps://login-security-check.example-support[.]com/verify.",
+    "Shortly after the user clicked the link, a successful login was observed from 203.0.113.42 from an unusual country.",
+    "The same account attempted to create a new inbox forwarding rule to external-recipient@example.net.",
+    "MFA challenge logs show repeated prompts before the successful login.",
+    "The user said they approved one MFA push because they thought IT was testing the system."
+  ],
+  "raw_observables": {
+    "source_ip": "203.0.113.42",
+    "suspicious_domain": "login-security-check.example-support.com",
+    "suspicious_url": "hxxps://login-security-check.example-support[.]com/verify",
+    "target_account": "employee@example.com",
+    "external_forwarding_target": "external-recipient@example.net"
+  },
+  "initial_question": "Determine likely incident type, extract indicators, map possible attack patterns, estimate risk, and recommend first response actions."
+}
