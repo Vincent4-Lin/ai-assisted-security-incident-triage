@@ -4,6 +4,14 @@ This project is a cybersecurity portfolio tool that uses an LLM API to assist wi
 
 The goal is not to let an LLM make final security decisions. The goal is to help an analyst structure messy incident notes into a reviewable triage report: indicators, attack patterns, likely incident type, risk level, MITRE ATT&CK mapping, evidence, and recommended response actions.
 
+## Portfolio Position
+
+This repository is an earlier prototype for my current AI-assisted SOC direction. It focuses on the triage schema and the basic LLM-assisted workflow.
+
+My more complete application direction is [ai-soc-analyst](https://github.com/Vincent4-Lin/ai-soc-analyst), which expands the idea to multiple security artifact types such as logs, scanner output, and phishing emails.
+
+This project remains useful because it shows the first research-oriented version of the idea: turning messy incident notes into structured output while keeping a human analyst responsible for review.
+
 ## Research Relevance
 
 This project is designed as a small portfolio prototype for AI-assisted security incident analysis. Instead of using an LLM as a final decision maker, it uses the model to transform messy incident notes, suspicious login descriptions, URLs, logs, and threat reports into structured triage output for analyst review. The output includes indicators of compromise, likely attack patterns, MITRE ATT&CK mapping, evidence, confidence, limitations, and recommended response actions.
