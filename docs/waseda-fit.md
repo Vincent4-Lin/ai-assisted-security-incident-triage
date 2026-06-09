@@ -34,6 +34,11 @@ The project can be extended toward:
 - AI-assisted attack pattern classification.
 - Human-reviewable incident response recommendations.
 
+## CV-Ready Bullets
+
+- Built an AI-assisted incident triage tool that converts security notes and sample incidents into structured JSON reports with indicators, attack patterns, MITRE ATT&CK mapping, evidence, limitations, and recommended response actions.
+- Applied offline heuristics and LLM-assisted analysis to support human-reviewable security investigation workflows, positioning the project toward network security incident analysis and attack pattern identification.
+
 ## Main Risk
 
 The project must avoid becoming a simple wrapper around an LLM API. To be stronger as a graduate school portfolio project, it should include:

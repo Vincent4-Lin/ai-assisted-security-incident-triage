@@ -4,15 +4,11 @@ This project is a cybersecurity portfolio tool that uses an LLM API to assist wi
 
 The goal is not to let an LLM make final security decisions. The goal is to help an analyst structure messy incident notes into a reviewable triage report: indicators, attack patterns, likely incident type, risk level, MITRE ATT&CK mapping, evidence, and recommended response actions.
 
-## Research Direction Fit
+## Research Relevance
 
-Confirmed research direction:
+This project is designed as a small portfolio prototype for AI-assisted security incident analysis. Instead of using an LLM as a final decision maker, it uses the model to transform messy incident notes, suspicious login descriptions, URLs, logs, and threat reports into structured triage output for analyst review. The output includes indicators of compromise, likely attack patterns, MITRE ATT&CK mapping, evidence, confidence, limitations, and recommended response actions.
 
-```text
-AI-assisted cybersecurity investigation and threat intelligence analysis for identifying attack patterns and improving incident response.
-```
-
-This project supports that direction by turning incident descriptions, suspicious login notes, URLs, logs, and threat reports into structured investigation output.
+This makes the project relevant to AI-assisted cybersecurity investigation and threat intelligence analysis because it focuses on identifying attack patterns and improving incident response workflows, rather than simply generating free-form chatbot advice. For Waseda IPS / Jun Wu's Network Intelligence and Security Lab, the project is positioned as an initial implementation of AI-assisted analysis for network security incidents and attack pattern identification. Future extensions could compare offline rules with LLM-assisted triage, evaluate repeated incident samples, and add more network or authentication log inputs.
 
 For Waseda IPS / Wu Lab, this project is positioned as:
 
@@ -29,6 +25,7 @@ AI-assisted analysis for network security incidents and attack pattern identific
 - Produces JSON output for analyst review.
 - Includes an offline mode so the project can run without an API key.
 - Avoids storing API keys in source code.
+- Defines a defensive security scope for authorized offline analysis.
 
 ## Example Use Cases
 
@@ -104,6 +101,7 @@ ai-assisted-security-incident-triage/
 ├── data/
 │   └── sample_incident.json
 ├── docs/
+│   ├── scope-and-ethics.md
 │   └── waseda-fit.md
 ├── reports/
 │   └── .gitkeep
@@ -116,3 +114,5 @@ ai-assisted-security-incident-triage/
 ## Analyst Safety Note
 
 LLM output must be reviewed by a human analyst. The tool asks the model to provide evidence and confidence, but it can still miss indicators, overstate risk, or produce incorrect ATT&CK mappings.
+
+This project is limited to authorized defensive security work and offline analysis of user-provided incident data. See [Scope and Ethics](docs/scope-and-ethics.md).
